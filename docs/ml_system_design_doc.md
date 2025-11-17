@@ -154,7 +154,7 @@
 
 ### 2.2. Схема решения
 
-
+<img src="https://raw.githubusercontent.com/VadimPanenko/generative-design-tool/refs/heads/main/docs/generative_service_scheme.png" alt="generative_service_scheme.png">
 
 ---
 
