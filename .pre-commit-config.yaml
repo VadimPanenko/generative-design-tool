@@ -1,0 +1,72 @@
+repos:
+  # Ruff для линтинга и форматирования Python кода
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      # Запуск линтера
+      - id: ruff
+        name: ruff linter
+        args: [--fix]
+        types_or: [python, pyi, jupyter]
+      
+      # Запуск форматера
+      - id: ruff-format
+        name: ruff formatter
+        types_or: [python, pyi, jupyter]
+
+  # Общие хуки для проверки качества кода
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Удаление trailing whitespace
+      - id: trailing-whitespace
+        name: trim trailing whitespace
+        exclude: ^(docs/|*.md)
+      
+      # Проверка окончания файлов на новую строку
+      - id: end-of-file-fixer
+        name: fix end of files
+      
+      # Проверка валидности YAML
+      - id: check-yaml
+        name: check yaml files
+        args: ['--safe']
+      
+      # Проверка валидности TOML
+      - id: check-toml
+        name: check toml files
+      
+      # Проверка добавления больших файлов
+      - id: check-added-large-files
+        name: check for added large files
+        args: ['--maxkb=1000']
+      
+      # Проверка наличия конфликтов слияния
+      - id: check-merge-conflict
+        name: check for merge conflicts
+      
+      # Проверка наличия debug statements
+      - id: debug-statements
+        name: debug statements check
+
+  # Проверка Markdown файлов
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.43.0
+    hooks:
+      - id: markdownlint
+        name: markdown linter
+        args: ['--fix']
+
+# Настройки CI
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit.com hooks
+    
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: []
+  submodules: false
+
