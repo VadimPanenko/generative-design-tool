@@ -1,8 +1,7 @@
 # ML System Design Doc
 ## Генеративный сервис для дизайнеров - MVP
 
-*Дизайн-документ разработан на основе шаблона от [Reliable ML](https://github.com/rvenie/wsi_research_agent/blob/main/docs/ml_system_design_doc.
-md)*
+*Дизайн-документ разработан на основе шаблона от [Reliable ML](https://github.com/rvenie/wsi_research_agent/blob/main/docs/ml_system_design_doc.md)*
 
 ---
 
