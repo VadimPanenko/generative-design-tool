@@ -40,8 +40,16 @@
 ├── docs/
 │   ├── generative_service_scheme.png    # Схема проекта
 │   └── ml_system_design_doc.md          # Дизайн-документ
+├── notebooks/
+│   └── eda_generative_service.ipynb     # EDA
+├── scripts/
+│   ├── README.md                        # Описание скриптов
+│   ├── main.py                          # Основной скрипт
+│   ├── modes.py                         # Дополнительные режимы
+│   └── requirements.txt                 
+├── .gitignore
 ├── .pre-commit-config.yaml        
-├── pyproject.toml                
-├── .gitignore                     
-└── README.md                            # Описание проекта
+├── README.md                            # Описание проекта                            
+└── pyproject.toml   
 ```
+
